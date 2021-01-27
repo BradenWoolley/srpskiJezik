@@ -1,20 +1,55 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title id="title">
+      Srpski Jezik
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<!--Score keeping -->
+  <div id="score">
+      <ion-card-header>
+        <ion-card-title>Score:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        14/20
+      </ion-card-content>
+  </div>
+
+<!--Load question/sentence to user-->
+  <div id="question">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Translate the sentence below</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Da li volite Beograd?
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+<!--User input-->
+  <div id="translation">
+    <ion-card>
+      <ion-item>
+        <ion-label position="floating">Translation here</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <div class="buttons">
+      <ion-row>
+      <ion-col size="6">
+        <ion-button color="warning" shape="round">Clear</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="success" shape="round">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+    </div>
+
   </div>
 </ion-content>

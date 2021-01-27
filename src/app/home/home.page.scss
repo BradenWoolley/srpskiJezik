@@ -1,27 +1,32 @@
-#container {
+#title{
+  text-align: center;
+}
+
+#score {
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+  transform: translateY(-50%);
+}
+//Sentence/question
+#question{
   text-align: center;
 
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
 }
+//User input
+#translation {
+  text-align: center;
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60%;
+  transform: translateY(-50%);
 }
