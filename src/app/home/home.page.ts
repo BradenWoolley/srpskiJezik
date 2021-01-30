@@ -30,7 +30,9 @@ export class HomePage {
     this.http.post('http://localhost:8080', data, { headers:  {'Content-Type': 'application/json'} })
     .subscribe((response)=>{
       console.log(response);
+      this.title = response;
     })
   }
+
 
 }
