@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class HomePage {
 
   private title;
+  private answer;
 
   constructor(private http: HttpClient) {}
 
@@ -20,10 +21,15 @@ export class HomePage {
     })
   }
 
-  private test() {
-    this.http.get('http://localhost:8080')
-    .subscribe((value) =>{
-      console.log(value);
+  private submitAnswer(){
+
+    let data = JSON.stringify({
+      key: this.answer
+    });
+
+    this.http.post('http://localhost:8080', data, { headers:  {'Content-Type': 'application/json'} })
+    .subscribe((response)=>{
+      console.log(response);
     })
   }
 
