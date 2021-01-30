@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  private title;
+
+  constructor(private http: HttpClient) {}
+
+  ionViewWillEnter(){
+    this.http.get('http://localhost:8080')
+    .subscribe((value) =>{
+      console.log(value);
+      this.title = value;
+    })
+  }
+
+  private test() {
+    this.http.get('http://localhost:8080')
+    .subscribe((value) =>{
+      console.log(value);
+    })
+  }
 
 }
